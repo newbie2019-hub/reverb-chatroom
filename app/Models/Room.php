@@ -10,6 +10,8 @@ class Room extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function messages(): HasMany
     {
         return $this->hasMany(Message::class);
